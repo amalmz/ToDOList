@@ -1,0 +1,42 @@
+.my-custom-menu {
+    --width: 500px;
+  }
+h1 {
+  color: brown;
+  font-family: cursive;
+  margin-left: 20px;
+  font-size: 30px;
+}
+h5 {
+    color: #461d1d;
+    margin-left: 20px;
+    margin-top: -7px;
+    font-size: medium;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    font-family: cursive;
+}
+.add-button {
+  --background: #1691a1;
+  position: absolute;
+  justify-items: center;
+  bottom: 15px;
+  width: 30%;
+  --color: #ebf2f5;
+  margin-left: 17%;
+}
+.b1{
+  --background: #e70e0e;
+  bottom:15px; 
+  position: absolute;
+  width: 30%; 
+  margin-left: 52%;
+  --color: #ebf2f5;
+}
+ion-card{
+  margin-top: 6px;
+  margin-bottom: 0px;
+}
+ion-content {
+  --background: url('/assets/images/image1.jpg') no-repeat center/cover fixed;
+}

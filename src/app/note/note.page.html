@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHerf="/home" text="Home"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Notes </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div class="add-note">
+    <ion-item class="input" style=" margin-top: 20px;">
+      <ion-input  minlength="3" maxlength="30" type="text" placeholder="Note Title" [(ngModel)]="title" required="true"></ion-input>
+    </ion-item>
+    <ion-item class="input" style=" margin-top: 10px;">
+      <ion-textarea auto-grow type="text"placeholder="Note Description ..."[(ngModel)]="desc"required="true" ></ion-textarea>
+    </ion-item>
+
+    <div class="add-btn">
+      <ion-button fill="clear" expand="block" (click)=" addNoteToFirebase()"  style="--background: #1691a1; color:white;">
+        <ion-icon name="add-outline" style="color: white;"></ion-icon> Add </ion-button>
+      <ion-button fill="clear" expand="block"(click)=" presentAlertConfirm()" style="--background: #f12b2b; color:white;">
+        <ion-icon name="trash-outline" style="color: white;"></ion-icon> Delete All Notes
+      </ion-button>
+    </div>
+  </div>
+ 
+  
+  
+    <div class="notes">
+      <ion-list>
+        <ion-item *ngFor="let note of notes" >
+          <ion-text>
+            <p>
+              <b>Title: </b>{{note.title}} <br />
+              <b>Description: </b>{{note.desc}} 
+            </p>
+            <hr>
+          </ion-text>
+          <ion-button style="--background: #f12b2b;" (click)="deletenote(note)" fill="clear" slot="end">
+            <ion-icon name="trash-outline" style="color:white"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </div>
+
+  
+ 
+</ion-content>

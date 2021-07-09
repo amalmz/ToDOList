@@ -1,0 +1,28 @@
+h1{
+ text-align: center;
+ font-family:cursive;
+ color: brown;
+
+}
+p{
+  text-align: center;
+  font-size: medium;
+  font-family:cursive;
+  color: #733932;
+}
+
+ion-content {
+  --background: url('/assets/images/image5.jpg') no-repeat center/cover fixed;
+}
+ion-item {
+  margin-left: 10px;
+  margin-right: 10px;
+ 
+}
+ion-button{
+  font-size: medium;
+   --background: #1691a1;
+}
+.container{
+  text-align: center;
+}

@@ -1,0 +1,27 @@
+.add-note {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .input {
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  .add-btn {
+    width: 80%;
+    margin-left: 8px;
+    margin-top: 10px;
+  }
+  
+  .notes {
+    width: 90%;
+    margin-top:10px;
+    margin-left: 15px;
+  }
+  
+  ion-content {
+    --background: url('/assets/images/image1.jpg') no-repeat center/cover fixed;
+  }  

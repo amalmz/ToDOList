@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHerf="/home" text="Home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <form [formGroup]="groupform" (ngSubmit)="onSubmitForm()" style="margin-top: 30px; ">
+     <ion-item line="full">
+       <ion-label position="floating">Name</ion-label>
+       <ion-input formControlName="name" type="text" required></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
+      Name is required .
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.minlength">
+      Name should be min 2 chars long .
+    </span>
+   
+      <ion-item line="full">
+        <ion-label position="floating">Last Name</ion-label>
+        <ion-input formControlName="last" type="text" required></ion-input>
+      </ion-item>
+
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.last.errors?.required">
+       Last Name is required .
+      </span>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.last.errors?.minlength">
+       Last Name should be min 2 chars long .
+      </span>
+      
+      <ion-item line="full">
+        <ion-label position="floating">Username</ion-label>
+        <ion-input  formControlName="user" type="text" required></ion-input>
+       </ion-item>
+       <span class="error ion-padding" *ngIf="isSubmitted && errorControl.user.errors?.required">
+        username is required .
+      </span>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.user.errors?.pattern">
+        this username is invalid  .
+      </span>
+       <ion-item line="full">
+       <ion-label position="floating">Password</ion-label>
+       <ion-input  formControlName="password" type="password" required></ion-input>
+      </ion-item>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
+       password is required .
+      </span>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.pattern">
+        this password is invalid  .
+      </span>
+      
+      <ion-item line="full">
+      <ion-label position="floating">Confirm Password</ion-label>
+       <ion-input   formControlName="password" type="password" required></ion-input>
+      </ion-item>
+    
+      <ion-button type="submit"  style=" margin-left: 95px; margin-top: 10px;">
+        Save
+      </ion-button>
+
+
+   </form>
+
+</ion-content>
